@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/Decoration/logo free.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Wedding E-Invite | RSVP</title>
+  </head>
+  <body>
+    <div class="rsvp__box box">
+      <form action="POST" class="rsvp__form" id="rsvp-form">
+        <div class="rsvp__form--exit">
+          <a href="index.html" class="rsvp__form--exit--btn">X</a>
+        </div>
+        <div class="mb-3">
+          <label for="full-name" class="form-label rsvp__form--label"
+            >Full Name</label
+          >
+          <input
+            type="text"
+            class="form-control form-control-lg rsvp__form--input"
+            id="full-name"
+            placeholder="Input your name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="contact-number" class="form-label rsvp__form--label"
+            >Contact Number (without -)</label
+          >
+          <input
+            type="number"
+            class="form-control form-control-lg rsvp__form--input"
+            id="contact-number"
+            placeholder="Input your hp no"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email-address" class="form-label rsvp__form--label"
+            >Email Address</label
+          >
+          <input
+            type="email"
+            class="form-control form-control-lg rsvp__form--input"
+            id="email-address"
+            placeholder="Input your email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="no-pax" class="form-label rsvp__form--label"
+            >No. of Pax</label
+          >
+          <input
+            type="number"
+            class="form-control form-control-lg rsvp__form--input"
+            id="no-pax"
+            placeholder="Input the no. of pax"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="affiliation" class="form-label rsvp__form--label"
+            >Affiliation</label
+          >
+          <select
+            class="form-select form-select-lg mb-3 rsvp__form--select"
+            id="affiliation"
+          >
+            <option selected disabled required>
+              Please indicate your affiliation
+            </option>
+            <option value="Groom">Groom's Side</option>
+            <option value="Bride">Bride's Side</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div class="rsvp__form--cta">
+          <button
+            type="button"
+            id="rsvp-submit"
+            class="rsvp__form--btn btn btn-lg"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            id="rsvp-clear"
+            class="rsvp__form--btn rsvp__form--btn--clear btn btn-lg"
+          >
+            Clear
+          </button>
+        </div>
+      </form>
+      <div class="rsvp__submitted">
+        <p class="rsvp__submitted--txt">
+          Your RSVP has been submitted successfully. Thank you for your
+          response! We look forward to seeing you at the event.
+        </p>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // RSVP Form
+      const rsvpClearBtn = document.querySelector(".rsvp__form--btn--clear");
+      const rsvpForm = document.getElementById("rsvp-form");
+
+      const handlerClearForm = function () {
+        rsvpClearBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          rsvpForm.reset();
+        });
+      };
+
+      handlerClearForm();
+    </script>
+  </body>
+</html>

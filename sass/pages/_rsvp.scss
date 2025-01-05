@@ -1,0 +1,132 @@
+.rsvp {
+  margin: $space-margin $space-gap;
+  text-align: center;
+  position: relative;
+
+  &__btn {
+    @include main-header;
+    font-size: calc(#{$text-emphasize + $text-big}/ 2);
+    background-color: $color-alert;
+    padding: $space-supersmall $space-small;
+    border: 0;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.rsvp {
+  &__box {
+    background-color: $color-grey;
+    height: 100vh;
+  }
+
+  &__form {
+    position: relative;
+    padding: $space-margin $space-gap;
+    // padding-top: $space-small;
+
+    &--exit {
+      position: absolute;
+      top: $space-small;
+      right: $space-sub;
+
+      &--btn {
+        font-size: calc(#{$text-small + $text-mini}/ 2);
+        font-weight: 500;
+        color: $color-white;
+        background-color: $color-alert;
+        padding: $space-supersmall $space-mini;
+        text-decoration: none;
+        border-radius: 3px;
+      }
+    }
+
+    &--label {
+      font-size: $text-small;
+      font-family: "Lato", serif;
+      color: $color-tint;
+    }
+
+    &--input,
+    &--select {
+      font-size: calc(#{$text-small + $text-mini}/ 2);
+      font-family: inherit;
+      color: $color-tint;
+      margin-left: $space-mini;
+
+      &::placeholder,
+      option {
+        color: rgba($color-tint, 0.7);
+      }
+    }
+
+    &--cta {
+      display: flex;
+      gap: $space-mini;
+    }
+
+    &--btn {
+      margin-top: $space-sub;
+      background-color: $color-tint;
+      color: $color-white;
+      font-size: $text-small;
+      width: calc(#{$space-widegap + $space-big}/ 2);
+      border: none;
+
+      &:hover,
+      &:active {
+        background-color: $color-black;
+        color: $color-white;
+        border: none;
+      }
+
+      &--clear {
+        background-color: $color-alert;
+      }
+    }
+  }
+
+  &__submitted {
+    margin: $space-margin auto;
+    background-color: $color-tint;
+
+    &--txt {
+      color: $color-white;
+      font-size: $text-small;
+      padding: $space-mini $space-sub;
+      text-align: center;
+      line-height: 1.8;
+    }
+  }
+}
+
+.countdown {
+  margin: $space-margin 0;
+  text-align: center;
+
+  &__header {
+    @include main-header;
+    font-size: calc(#{$text-big}* 1.25);
+    margin: $space-margin 0;
+  }
+
+  &__placeholder {
+    padding: $space-small 0;
+    background-color: $color-main;
+    color: $color-tint;
+  }
+
+  &__details {
+    font-family: "Great Vibes", serif;
+    font-size: $text-standard;
+    font-weight: 800;
+    &:not(:last-child) {
+      margin-right: $space-supersmall;
+    }
+  }
+
+  &__number {
+    font-size: $text-emphasize;
+    font-weight: 800;
+    font-family: "Great Vibes", serif;
+  }
+}

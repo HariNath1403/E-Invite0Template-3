@@ -1,0 +1,113 @@
+.nav {
+  height: $space-decent;
+  padding: $space-small $space-supersmall;
+  background-color: $color-tint;
+  display: flex;
+  justify-content: end;
+
+  &__btn {
+    margin-right: $space-small;
+    padding: $space-mini;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    // width: $space-decent;
+    // height: $space-margin;
+
+    &--icon {
+      background-color: $color-main;
+      height: 3px;
+      width: $space-sub;
+      position: relative;
+      display: block;
+      border-radius: 2px;
+      transition: all 0.3s;
+
+      &::before,
+      &::after {
+        content: "";
+        background-color: $color-main;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        border-radius: 2px;
+        transition: all 0.3s;
+        left: 0;
+      }
+
+      &::before {
+        top: calc(
+          #{-$space-supersmall - $space-mini}/ 2
+        ); /* Position the top line */
+      }
+
+      &::after {
+        top: calc(
+          #{$space-supersmall + $space-mini}/ 2
+        ); /* Position the bottom line */
+      }
+    }
+    &.is-active .nav__btn--icon {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+    }
+  }
+}
+
+// Navigation Page Styles
+.nav-page {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-tint;
+  z-index: 2;
+  transition: 0.3s ease-in-out;
+
+  &.is-active {
+    right: 0;
+  }
+
+  &__list {
+    margin: 0;
+    margin-top: $space-gap;
+    padding: $space-margin;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      margin: 20px 0;
+
+      a {
+        text-decoration: none;
+        color: $color-main;
+        font-family: "Great Vibes", serif;
+        font-size: $text-emphasize;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}

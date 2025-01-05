@@ -1,0 +1,227 @@
+.home {
+  &__background {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    margin: $space-gap 0;
+    text-align: center;
+    font-family: "Great Vibes", serif;
+
+    &--name {
+      @include main-header;
+      font-size: $text-big;
+      margin-top: $space-gap;
+    }
+
+    &--date {
+      @include main-header;
+      font-size: $text-emphasize;
+      margin-top: $space-gap;
+    }
+  }
+
+  &__txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: $space-margin;
+    padding: $space-small;
+
+    &--space {
+      border-top: 2px solid $color-main;
+      height: 1px;
+      width: calc(#{$space-big}* 1.25);
+    }
+
+    &--content {
+      font-size: $text-mini;
+      font-weight: 500;
+      text-align: center;
+      padding: $space-sub $space-standard;
+      line-height: 1.8;
+    }
+  }
+}
+
+.venue {
+  &__header {
+    text-align: center;
+
+    &--main {
+      @include main-header;
+      font-size: $text-big;
+      margin-top: $space-gap;
+    }
+
+    &--sub {
+      margin: $space-gap $space-standard;
+      font-size: $text-mini;
+      font-weight: 400;
+      line-height: 1.8;
+
+      a {
+        color: $color-main;
+        text-decoration: none;
+        padding-bottom: $space-supersmall;
+        border-bottom: 1.5px solid $color-main;
+      }
+
+      &--icon {
+        font-size: $text-small;
+      }
+    }
+  }
+
+  &__pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-standard;
+
+    &--figure {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__dress {
+    margin-top: $space-standard;
+    text-align: center;
+
+    &--header {
+      @include main-header;
+    }
+
+    &--txt {
+      margin: $space-gap $space-standard;
+      font-size: $text-mini;
+      font-weight: 400;
+      line-height: 1.8;
+    }
+
+    &--colors {
+      margin: $space-standard;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      &--index {
+        height: $space-standard;
+        width: $space-standard;
+        background-color: beige;
+        border-radius: 50%;
+
+        &--1 {
+          background-color: #020418;
+        }
+
+        &--2 {
+          background-color: #8e414e;
+        }
+
+        &--3 {
+          background-color: #6c96a9;
+        }
+      }
+    }
+  }
+  &__schedule {
+    text-align: center;
+    margin: $space-standard 0;
+
+    &--header {
+      @include main-header;
+    }
+
+    &--box {
+      list-style: none;
+      margin-top: $space-margin;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: $space-margin;
+    }
+
+    &--division {
+      margin: $space-small 0;
+      margin-left: $space-small;
+      padding: 0 $space-gap;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border-left: 2px solid $color-main;
+      position: relative;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        top: -2.5px;
+        left: -8px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $color-tint;
+        border: 2px solid $color-main;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: -2.5px;
+        left: -8px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $color-tint;
+        border: 2px solid $color-main;
+      }
+
+      &--time {
+        @include main-header;
+        font-size: calc(#{$text-emphasize + $text-standard}/ 2);
+        font-weight: 700;
+        border-radius: 9px;
+        padding: $space-mini $space-sub;
+        color: $color-tint;
+        background-color: $color-main;
+        width: 85%;
+        transform: translateY(-50%);
+      }
+
+      &--img {
+        width: calc(#{$space-big * 2});
+        height: auto;
+        margin: $space-mini 0;
+        border-radius: 9px;
+      }
+
+      &--header {
+        @include main-header;
+        font-size: $text-emphasize;
+        margin-top: $space-standard;
+      }
+
+      &--caption {
+        margin-top: $space-supersmall;
+        line-height: 1.8;
+        font-size: $text-mini;
+        text-align: left;
+        transform: translateY(15%);
+      }
+    }
+  }
+}
