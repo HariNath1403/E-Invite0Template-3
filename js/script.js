@@ -1,4 +1,3 @@
-/*
 window.onload = function () {
   // Hide the spinner
   document.getElementById("loading-spinner").style.display = "none";
@@ -6,7 +5,6 @@ window.onload = function () {
   // Show the main content
   document.getElementById("box").style.display = "block";
 };
-*/
 
 // Countdown
 // Set the target date and time
